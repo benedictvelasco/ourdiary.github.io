@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="secondpage.css">
+  <link rel="stylesheet" href="valentine.css">
+  <title>VALENTINE'S</title>
+</head>
+<body>
+  <div class="main-div">
+    <nav>
+      <h1>HAPPY VALENTINE'S</h1>
+    </nav>
+    <div class="categories">
+      <section class="category-section">
+        <a href="#"><button class="category">Valentine's</button></a>
+        <button class="category">Anniversary</button>
+        <button class="category">Birthday</button>
+        <button class="category">Missing U day</button>
+      </section>
+    </div>
+  </div>
+    <div class="h1">
+      <h1>WHERE DO YOU WANT TO GO?</h1>
+      <p>February 14, 2025</p>
+    </div>
+    <div class="card-container">
+      <div class="card" onclick="showModal('Arca South')">
+        <img src="arca.png" alt="Arca South">
+        <h3>Arca South</h3>
+        <button class="btn">Click me!</button>
+      </div>
+      <div class="card" onclick="showModal('McDo, Levi')">
+        <img src="mcdolevi.jpg" alt="McDo Levi">
+        <h3>McDo, Levi</h3>
+        <button class="btn">Click me!</button>
+      </div>
+      <div class="card" onclick="showModal('Jabee, B-bayan')">
+        <img src="bbayan.png" alt="B-bayan">
+        <h3>Jabee, B-bayan</h3>
+        <button class="btn">Click me!</button>
+      </div>
+      <div class="card" onclick="showModal('BGC')">
+        <img src="BGC.jpg" alt="BGC">
+        <h3>BGC</h3>
+        <button class="btn">Click me!</button>
+      </div>
+    </div>
+  
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>YOU PICKED</h2>
+        <p id="locationText"></p>
+        <p>See you on February 14, 2025 !!</p>
+      </div>
+    </div>
+
+
+    <script src="firstpage.js"></script>
+</body>
+</html>

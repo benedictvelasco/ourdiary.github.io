@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="firstpage.css">
+  <title>ONLINE DIARY</title>
+</head>
+<body>
+  <header class="main-header">
+    <h1>LITTLE DIARYY</h1>
+  </header>        
+  <section class="main-section">
+    <div class="main-div">
+      <div class="content-div">
+        <img src="uss.jpg" alt="">
+      </div>
+      <div class="content-div">
+        <fieldset>
+          <div class="label">
+            <input type="text" id="text" placeholder="Enter your password" maxlength="6" readonly>
+          </div>
+        </fieldset>
+        <div class="keypad">
+          <button class="button" onclick="addNumber('1')">1</button>
+          <button class="button" onclick="addNumber('2')">2</button>
+          <button class="button" onclick="addNumber('3')">3</button>
+          <button class="button" onclick="addNumber('4')">4</button>
+          <button class="button" onclick="addNumber('5')">5</button>
+          <button class="button" onclick="addNumber('6')">6</button>
+          <button class="button" onclick="addNumber('7')">7</button>
+          <button class="button" onclick="addNumber('8')">8</button>
+          <button class="button" onclick="addNumber('9')">9</button>
+          <button class="button" onclick="backspace()">C</button>
+          <button class="button" onclick="addNumber('0')">0</button>
+          <button class="button" onclick="checkPassword()">Enter</button>
+        </div>
+      </div>
+    </div>
+  </section>
+        
+  <p class="message" id="status-message"></p> 
+  <p class="message" id="redirect-message"></p> 
+
+
+<script src="firstpage.js"></script>
+    
+</body>
+</html>

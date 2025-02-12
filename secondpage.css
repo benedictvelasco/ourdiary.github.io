@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffa4a4dc;
+  background-image: url("tulipbg-removebg-preview.png");
+}
+
+.categories{
+  padding: 1rem 2rem;
+}
+
+.category-section{
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.category{
+  margin-right: 1rem;
+  word-wrap: none;
+  white-space: nowrap;
+  border: none;
+  border-radius: 900px;
+  background-color: #ffa4a4dc;
+  padding: .5rem 1rem;
+  font-size: inherit;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.category:hover{
+  background-color: #DDD;
+}
+
+.category:active{
+  background-color: #606060;
+  color: white;
+  border-color: #EEE;
+}

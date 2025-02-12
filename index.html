@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="firstpage.css">
+  <title>ONLINE DIARY</title>
+</head>
+<body>
+  <header class="main-header">
+    <h1>LITTLE DIARY</h1>
+  </header>        
+  <section class="main-section">
+    <div class="main-div">
+      <div class="content-div">
+        <img src="uss.jpg" alt="">
+      </div>
+      <div class="content-div">
+        <fieldset>
+          <div class="label">
+            <input type="text" id="text" placeholder="Enter your password" maxlength="6" readonly>
+          </div>
+        </fieldset>
+        <div class="keypad">
+          <button class="button" onclick="addNumber('1')">1</button>
+          <button class="button" onclick="addNumber('2')">2</button>
+          <button class="button" onclick="addNumber('3')">3</button>
+          <button class="button" onclick="addNumber('4')">4</button>
+          <button class="button" onclick="addNumber('5')">5</button>
+          <button class="button" onclick="addNumber('6')">6</button>
+          <button class="button" onclick="addNumber('7')">7</button>
+          <button class="button" onclick="addNumber('8')">8</button>
+          <button class="button" onclick="addNumber('9')">9</button>
+          <button class="button" onclick="backspace()">C</button>
+          <button class="button" onclick="addNumber('0')">0</button>
+          <button class="button" onclick="checkPassword()">Enter</button>
+        </div>
+      </div>
+    </div>
+  </section>
+        
+  <p class="message" id="status-message"></p> 
+  <p class="message" id="redirect-message"></p> 
+
+
+  <script>
+    const correctPassword = "221105"; 
+    let attempts = 0;
+    
+    const randomMessages = [
+      "MALI BUBBYYY",
+      "WRONG AGAIN PO",
+      "TRY MO UNG ANNI...HIHI MAALIII",
+      "HALA SIGE PINDOT",
+      "KAYA MO YAN ! !", 
+      "MALAPIT NA MAUBOS ATTEMPTS MO\n(WALA NA AKONG MAISIP NA WORD)"
+    ];
+    
+    function addNumber(num) {
+      let inputField = document.getElementById("text");
+      if (inputField.value.length < 6) {
+        inputField.value += num;
+      }
+    }
+    
+    function backspace() {
+      let inputField = document.getElementById("text");
+      inputField.value = inputField.value.slice(0, -1);
+    }
+    
+    function clearText() {
+      document.getElementById("text").value = "";
+    }
+    
+    function getRandomPosition() {
+      let x = Math.random() * (window.innerWidth - 200); // Avoids overflowing the screen width
+      let y = Math.random() * (window.innerHeight - 50); // Avoids overflowing the screen height
+      return { x, y };
+    }
+    
+    function removeAllMessages() {
+      document.querySelectorAll(".floating-message").forEach(msg => msg.remove());
+    }
+    
+    function checkPassword() {
+      let inputField = document.getElementById("text").value.trim();
+      let statusMessage = document.getElementById("status-message");
+      let redirectMessage = document.getElementById("redirect-message");
+    
+      if (inputField === correctPassword) {
+        statusMessage.innerText = "YAYY TAMA !!";
+        statusMessage.style.color = "green";
+    
+        attempts = 0; // Reset attempts after success
+    
+        removeAllMessages(); // Removes all wrong messages
+    
+        setTimeout(() => {
+          window.location.href = "secondpage.html";
+        }, 1000);
+        
+      } else {
+        attempts++; // Increment attempts on wrong password
+    
+        let floatingMessage = document.createElement("div");
+        floatingMessage.classList.add("floating-message");
+    
+        let randomIndex = Math.floor(Math.random() * randomMessages.length);
+        floatingMessage.innerText = attempts >= 3 ? randomMessages[randomIndex] : "OOPS MALI HIHI";
+    
+        let { x, y } = getRandomPosition();
+        floatingMessage.style.left = `${x}px`;
+        floatingMessage.style.top = `${y}px`;
+    
+        document.body.appendChild(floatingMessage);
+    
+        redirectMessage.innerText = ""; 
+        clearText(); 
+      }
+    }
+    </script>
+    
+</body>
+</html>

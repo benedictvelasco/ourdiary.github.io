@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+
+body {
+  background-image: url(tulipbg-removebg-preview.png);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.main-header{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f08080;
+  padding: 10px 0;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+.main-section{
+  width: 100%;
+  max-width: 650px;
+  background-color: #f8f8f8;
+  border: solid 2px pink;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  position: relative;
+}
+
+.main-div{
+  display: flex;
+  flex: wrap;
+}
+
+img{
+  margin: 30px;
+  width: 300px;
+  height: auto;
+}
+
+fieldset{
+  border: none;
+  margin: 20px;
+}
+
+#text{
+  resize: none;
+  text-align: center;
+  margin: 10px;
+  width: 230px;
+  height: 70px;
+  font-size: 20px;
+  letter-spacing: 1em;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid pink;
+}
+
+#text::placeholder{
+  text-align: left;
+  letter-spacing: normal;
+  font-size: 17px;
+}
+
+.keypad{
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.button{
+  width: 70px;
+  height: 70px;
+  background-color: #f08080;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+#enter-btn{
+  width: 126px;
+}
+
+.message {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.floating-message {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  white-space: nowrap;
+}
