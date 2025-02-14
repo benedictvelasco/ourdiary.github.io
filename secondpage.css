@@ -7,40 +7,36 @@ body{
   background-image: url("tulipbg-removebg-preview.png");
 }
 
-.categories{
-  padding: 1rem 2rem;
-}
-
-.category-section{
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-}
-
-.category{
-  margin-right: 1rem;
-  word-wrap: none;
-  white-space: nowrap;
-  border: none;
-  border-radius: 900px;
-  background-color: #ffa4a4dc;
-  padding: .5rem 1rem;
-  font-size: inherit;
-  cursor: pointer;
-  transition: background-color 150ms;
-}
-
-.category:hover{
-  background-color: #DDD;
-}
-
-.category:active{
-  background-color: #606060;
-  color: white;
-  border-color: #EEE;
-}
-
-.main-div{
+nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ff7979;
+  color: white;
+  border-radius: 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.category-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.category {
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffb6b6;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category:hover {
+  background-color: #ff6b6b;
+  color: white;
 }
